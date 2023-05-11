@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
   //TODO Make these both configurable by an admin
-  title = 'Verkkopeliyhdistys Insomnia ry';
-  subtitle =  'Make things right!';
+  title = 'Verkkopelitapahtuma Insomnia';
+  subtitle =  'Porin Karhuhallissa 26.10. - 29.10.2023';
 }
