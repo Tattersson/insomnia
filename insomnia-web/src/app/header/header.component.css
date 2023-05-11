@@ -1,0 +1,27 @@
+header{
+    margin: 0;
+    width: 100%;
+    height: 250px;
+    min-height: 100px;
+    max-height: 300px;
+
+    
+    background-image: url("https://gallery.insomnia.fi/kuvat/Insomnia/INSOMNIA%20XXI/TAPAHTUMA/_K7A6710.jpg?img=img4k"); /*TODO Make background image user configurable*/
+    background-position: 0 -250px;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.headerItem{
+    color: white;  
+    background-color: rgb(39, 50, 75);
+    padding: 25px;
+    text-transform: uppercase;
+}
+.subtitle{
+    text-transform: initial !important;
+    
+}
