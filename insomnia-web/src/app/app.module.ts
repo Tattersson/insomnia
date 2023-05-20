@@ -15,6 +15,7 @@ import { HeroComponent } from './hero/hero.component';
 import { PartnersComponent } from './partners/partners.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NewsComponent } from './news/news.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 
@@ -28,6 +29,7 @@ import { NewsComponent } from './news/news.component';
     HeroComponent,
     PartnersComponent,
     NewsComponent,
+    FooterComponent,
 
   ],
   imports: [

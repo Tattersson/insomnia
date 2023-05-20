@@ -1,43 +1,45 @@
 section{
-    display: flex;
-    flex-flow: row nowrap;
-    gap: 5rem;
-    justify-content: center;
     height: 100vh;
+    width: 50%;
+    margin: auto;
 }
-
+.flexcontainer{
+    display: flex;
+    gap: 2rem;
+    justify-content: center; 
+    flex-flow: wrap;
+}
 .newscontainer{
-    background: white;
-    border: 3px dotted orange;
+    display: flex;
+    flex-flow: column;
     width: 400px;
     height: 600px;
+    align-items: center;
+    
+    background: white;
     border-radius: 25px;
-
-
-
-}
-.headline{
-    text-align: center;
-    border: 1px dotted red;
-}
-.content{
-    padding: 1rem 2rem;
-    border: 1px dotted red;
-
-}
-.newscontainer button{
-    align-self: center;
-
 }
 .header img{
-    object-fit: fill;
-    height: 200px;
+    width: 400px;
+    object-fit: cover;
+    margin: 0;
+    padding: 0;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    
 }
 .header{
-    border: 1px dashed red;
-    border-radius: 25px;;
+    filter: drop-shadow(0, 10px, 10px, black);
+}
+.headline{
+    margin: 10px;
+    text-align: center;
+}
+.content{
+    margin: 1.5rem;
+    width: fit-content;
 }
 .buttonContainer{
-    border: 1px dotted red;
-    text-align: center;
+    margin-bottom: 1.2rem;
+    margin-top: auto; 
 }
