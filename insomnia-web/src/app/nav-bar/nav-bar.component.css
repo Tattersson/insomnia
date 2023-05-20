@@ -1,7 +1,12 @@
 mat-toolbar{
-    background-color: rgb(94, 109, 124);
+
     color: white;
+}
+.insomnia{
+    background-color: #080C13;
+    
 }
 .fill-remaining-space{
     flex: 1 1 auto;
 }
+

@@ -1,0 +1,43 @@
+section{
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 5rem;
+    justify-content: center;
+    height: 100vh;
+}
+
+.newscontainer{
+    background: white;
+    border: 3px dotted orange;
+    width: 400px;
+    height: 600px;
+    border-radius: 25px;
+
+
+
+}
+.headline{
+    text-align: center;
+    border: 1px dotted red;
+}
+.content{
+    padding: 1rem 2rem;
+    border: 1px dotted red;
+
+}
+.newscontainer button{
+    align-self: center;
+
+}
+.header img{
+    object-fit: fill;
+    height: 200px;
+}
+.header{
+    border: 1px dashed red;
+    border-radius: 25px;;
+}
+.buttonContainer{
+    border: 1px dotted red;
+    text-align: center;
+}

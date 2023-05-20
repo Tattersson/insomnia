@@ -4,13 +4,18 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
-import { HeaderComponent } from './header/header.component';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import { HeroComponent } from './hero/hero.component';
+import { PartnersComponent } from './partners/partners.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { NewsComponent } from './news/news.component';
+
 
 
 
@@ -20,7 +25,10 @@ import {MatTooltipModule} from '@angular/material/tooltip';
   declarations: [
     AppComponent,
     NavBarComponent,
-    HeaderComponent
+    HeroComponent,
+    PartnersComponent,
+    NewsComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -30,7 +38,8 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     MatIconModule,
     MatMenuModule,
     MatButtonModule,
-    MatTooltipModule
+    MatTooltipModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
