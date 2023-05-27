@@ -21,15 +21,12 @@ import { HeroComponent } from './hero/hero.component';
 import { PartnersComponent } from './partners/partners.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NewsComponent } from './news/news.component';
-<<<<<<< HEAD
 import { FooterComponent } from './footer/footer.component';
-=======
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LogInComponent } from './login-register/log-in/log-in.component';
 import { RegisterComponent } from './login-register/register/register.component';
 
 
->>>>>>> b6b27f1366879961d5788eae745d5c490e0ac7d1
 
 
 
@@ -43,12 +40,9 @@ import { RegisterComponent } from './login-register/register/register.component'
     HeroComponent,
     PartnersComponent,
     NewsComponent,
-<<<<<<< HEAD
     FooterComponent,
-=======
     LogInComponent,
     RegisterComponent,
->>>>>>> b6b27f1366879961d5788eae745d5c490e0ac7d1
 
   ],
   imports: [
