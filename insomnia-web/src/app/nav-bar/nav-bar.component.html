@@ -1,11 +1,8 @@
 <mat-toolbar class="insomnia">
-
-    <!--TODO When router is available, change buttons to work as links with routerLink-->
-    <!--TODO Change the Title when routerLink changes-->
     <mat-toolbar-row class="w-75 mx-auto">
         <span>{{title}}</span>
         <span class="fill-remaining-space"></span>
-        <button mat-icon-button color="accent" class="mx-1" matTooltip="Etusivu">
+        <button mat-icon-button color="accent" class="mx-1" matTooltip="Etusivu" [routerLink]="['']">
             <mat-icon>home</mat-icon>
         </button>
         <button mat-icon-button color="accent" class="mx-1" matTooltip="Uutiset">
@@ -20,9 +17,8 @@
         <button mat-icon-button color="accent" class="mx-1" matTooltip="Kirjaudu sisään" [routerLink]="['login']">
             <mat-icon aria-label="User management">perm_identity</mat-icon>
         </button>
-
-
     </mat-toolbar-row>
-
-
 </mat-toolbar>
+
+    <!--TODO When router is available, change buttons to work as links with routerLink-->
+    <!--TODO Change the Title when routerLink changes-->

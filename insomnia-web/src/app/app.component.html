@@ -9,4 +9,32 @@
     <router-outlet></router-outlet>
 </div>
 
+<<<<<<< HEAD
 >>>>>>> b6b27f1366879961d5788eae745d5c490e0ac7d1
+=======
+
+<div class="w-100 m-5 text-light m-auto mt-5">
+    
+    <table class="w-50 m-auto bg-dark rounded-3 my-5">
+        <thead>
+            <th class="p-2">ID</th>
+            <th class="p-2">Firstname</th>
+            <th class="p-2">Lastname</th>
+            <th class="p-2">Fullname</th>
+            <th class="p-2">Email</th>
+            <th class="p-2">Password</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users" class="border-1 border-danger-subtle">
+                <td class="p-2 text-dark text-bg-danger  text-center fw-bolder">{{ user.userId }}</td>
+                <td class="p-2 text-light">{{ user.firstname }}</td>
+                <td class="p-2 text-light">{{ user.lastname }}</td>
+                <td class="p-2 text-bg-info">{{user.fullname }}</td>
+                <td class="p-2 text-light">{{ user.email }}</td>
+                <td class="p-2 text-light">{{ user.password }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+>>>>>>> main

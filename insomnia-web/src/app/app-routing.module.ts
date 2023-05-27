@@ -9,10 +9,12 @@ const routes: Routes = [
   {
     path: 'login', 
     component: LogInComponent, 
+    title: 'Kirjaudu sisään'
   },
   {
     path: 'register', 
-    component: RegisterComponent, 
+    component: RegisterComponent,
+    title: 'Rekisteröidy' 
   }
 
 
