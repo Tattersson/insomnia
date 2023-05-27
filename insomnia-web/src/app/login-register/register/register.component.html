@@ -1,1 +1,90 @@
-<p>register works!</p>
+<mat-card class="w-25 bg-light-subtle m-auto mt-5 rounded-3 pb-3 shadow-lg">
+    <mat-card-title class=" p-3 m-0 bg-dark text-light shadow rounded-top-2">Rekisteröidy</mat-card-title>
+    <mat-card-content>
+        <form class="w-100 m-auto" (ngSubmit)="register(form1)" #form1="ngForm">
+            <mat-form-field class="w-100 mt-3" color="accent" aria-label="Etunimi">
+                <mat-label>
+                    <mat-icon>perm_identity</mat-icon>
+                    Etunimi
+                </mat-label>
+                <input matInput 
+                placeholder="Etunimi" 
+                color="accent" 
+                aria-label="Etunimi" 
+                matNativeControl="etunimi"
+                [(ngModel)] = "user.firstname"
+                name="firstname"
+                >
+            </mat-form-field>
+            <mat-form-field class="w-100 mb-3" color="accent" aria-label="Sukunimi">
+                <mat-label>
+                    <mat-icon>perm_identity</mat-icon>
+                    Sukunimi
+            </mat-label>
+            <input matInput 
+            placeholder="Sukunimi" 
+            color="accent" 
+            aria-label="Sukunimi" 
+            matNativeControl="sukunimi" 
+            [(ngModel)] = "user.lastname"
+            name= "lastname"
+            >
+            </mat-form-field>
+
+            <mat-form-field class="w-100 my-3" color="accent" aria-label="Sähköposti">
+                <mat-label>
+                    <mat-icon>email</mat-icon>
+                    Sähköpostiosoite
+                </mat-label>
+                <input matInput
+                 placeholder="example@email.com" 
+                 matNativeControl="email" 
+                 [(ngModel)] = "user.email"
+                 name="email"
+                 formControlName="email"
+                 >
+                <mat-hint>Toimii myös sinun käyttäjätunnuksenasi</mat-hint>
+            </mat-form-field>
+            <mat-form-field class="w-100" color="accent" aria-label="Salasana">
+                <mat-label>
+                    <mat-icon>password</mat-icon>
+                    Salasana
+                </mat-label>
+                <input matInput
+                type="password" 
+                placeholder="Salasana" 
+                matNativeControl="password" 
+                [(ngModel)] = "user.password"
+                name="password"
+                formControlName = "password">
+            
+            </mat-form-field>
+            <mat-form-field class="w-100 mb-2" color="accent" aria-label="Salasana uudelleen">
+                <mat-label>
+                    <mat-icon>password</mat-icon>
+                    Salasana uudelleen
+                </mat-label>
+                <input matInput 
+                type="password" 
+                placeholder="Salasana uudelleen" 
+                matNativeControl="password2" 
+                [(ngModel)] = "user.password2"
+                name="password2"
+                formControlName = "password">
+            
+            </mat-form-field>
+           
+
+
+        </form>
+        <div class="text-center mb-4">
+            <p>Tietosuojaselosteen pääset lukemaan alla olevasta napista</p>
+            <button mat-flat-button href="#" target="_blank" color="warn">Tietosuojaseloste</button>
+            
+        </div>
+    </mat-card-content>
+    <mat-card-footer class="m-auto p-2">
+        <button mat-raised-button color="primary" (click)="register(form1)">Rekisteröidy</button>
+    </mat-card-footer>
+</mat-card>
+

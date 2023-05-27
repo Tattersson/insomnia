@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { AuthService } from './auth.service';
+import { User } from './models/User';
+
 
 @Component({
   selector: 'app-root',
@@ -7,7 +10,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
+  users: User[] = [];
+ 
   
+  constructor(private authService: AuthService){}
 
+  ngOnInit() : void{
+    this.authService.getUsers().subscribe((result: User[]) => (this.users = result));
+    console.log(this.authService.getUsers());
+  }
 
 }

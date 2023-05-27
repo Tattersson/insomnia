@@ -8,5 +8,11 @@ import { Component } from '@angular/core';
 export class NavBarComponent {
 
   //TODO Make title user configurable
-  title = 'Etusivu'
+  
+  title:string = ''
+
+  getTitle() {}
+  setTitle(title:string) { 
+    return this.title = title;
+  }
 }
