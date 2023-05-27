@@ -17,7 +17,10 @@ export class AppComponent {
 
   ngOnInit() : void{
     this.authService.getUsers().subscribe((result: User[]) => (this.users = result));
-    console.log(this.authService.getUsers());
+  }
+
+  deleteUser(user: User){
+    this.authService.deleteUser(user).subscribe((response: User[]) => (this.users = response));
   }
 
 }

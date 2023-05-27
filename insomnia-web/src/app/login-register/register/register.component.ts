@@ -12,15 +12,19 @@ export class RegisterComponent {
 
   user = new User();
 
+  userRole = "admin";
 
-  constructor(private authService: AuthService) {}
+  
+
+  constructor(private authService: AuthService) {
+        
+  }
 
   register(e: NgForm){
 
     console.log(e.form.value);
 
-
-    this.authService.createUser(e.form.value).subscribe()
+    this.authService.createUser(e.form.value).subscribe();
 
   }
 

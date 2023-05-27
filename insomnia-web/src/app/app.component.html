@@ -7,7 +7,7 @@
 
 <div class="w-100 m-5 text-light m-auto mt-5">
     
-    <table class="w-50 m-auto bg-dark rounded-3 my-5">
+    <table class="w-75 m-auto bg-dark rounded-3 my-5">
         <thead>
             <th class="p-2">ID</th>
             <th class="p-2">Firstname</th>
@@ -15,6 +15,8 @@
             <th class="p-2">Fullname</th>
             <th class="p-2">Email</th>
             <th class="p-2">Password</th>
+            <th class="p-2">Role</th>
+
         </thead>
         <tbody>
             <tr *ngFor="let user of users" class="border-1 border-danger-subtle">
@@ -24,6 +26,8 @@
                 <td class="p-2 text-bg-info">{{user.fullname }}</td>
                 <td class="p-2 text-light">{{ user.email }}</td>
                 <td class="p-2 text-light">{{ user.password }}</td>
+                <td class="p-2 text-light">{{ user.role }}</td>
+                <td class="p-2 text-bg-danger text-center" (click)="deleteUser(user)"><mat-icon>close</mat-icon></td>
             </tr>
         </tbody>
     </table>

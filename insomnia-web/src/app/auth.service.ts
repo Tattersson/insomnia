@@ -11,6 +11,7 @@ export class AuthService {
 
   private url = "Users";
 
+
   public getUsers(): Observable<User[]> {
     return this.http.get<User[]>(`${environment.baseApiUrl}/${this.url}`);
   }
@@ -25,6 +26,11 @@ export class AuthService {
       user
       );
 
+  }
+  public deleteUser(user: User): Observable<User[]> {
+    return this.http.delete<User[]>(
+      `${environment.baseApiUrl}/${this.url}?Id=${user.userId}`
+      );
   }
 
 }
