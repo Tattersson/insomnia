@@ -1,0 +1,31 @@
+<h1 class="lh-1 text-light text-center mt-4">Profiilisi</h1>
+
+<div class="bg-light w-75 p-4 m-auto shadow" *ngFor="let user of users">
+
+    <div>
+        <h3>Henkilökohtaiset tiedot</h3>
+
+        <div>
+            <h5>Id</h5>
+            {{user.userId}}
+        </div>
+
+        <div>
+            <h5>Sukunimi</h5>
+            {{user.lastname}}
+        </div>
+        <div>
+            <h5>Etunimi</h5>
+            {{user.firstname}}
+        </div>
+        <div>
+            <h5>Sähköpostiosoitteesi</h5>
+            {{user.email}}
+        </div>
+        <div>
+            <h4>Roolit</h4>
+            {{user.role}}
+        </div>
+    </div>
+
+</div>

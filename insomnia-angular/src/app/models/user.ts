@@ -1,11 +1,10 @@
-export class User{
-    [x: string]: any;
+export class User {
     userId?: number;
     firstname = "";
     lastname = "";
     fullname = "";
     password = "";
-    password2 = "";
+    confirmpassword = "";
     role = "";
     email = "";
 }

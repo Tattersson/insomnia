@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="title">
+        <h2>Register</h2>
+    </div>
+    <div class="formContainer">
+        <form action="" class="formGroup" [formGroup]="registerForm" (ngSubmit)="register(user)">
+            <input type="text" [(ngModel)]="user.firstname" formControlName="firstname" id="firstname" placeholder="Firstname">
+            <input type="text" [(ngModel)]="user.lastname" formControlName="lastname" placeholder="Lastname">
+            <input type="text" [(ngModel)]="user.email" formControlName="email" placeholder="Email">
+            <input type="password" [(ngModel)]="user.password" formControlName="password" placeholder="Password">
+            <input type="password" [(ngModel)]="user.confirmpassword" formControlName="confirmpassword" placeholder="Confirm Password">
+        </form>
+    </div>
+    <div class="errorContainer">
+
+    </div>
+    <div class="buttonContainer">
+        <button type="submit" (click)="register(user)" mat-raised-button [disabled]="!registerForm.valid">Rekisteröidy</button>
+    </div>
+
+
+    {{registerForm.status}}
+    
+    {{ registerForm.value }}
+
+
+<!-- {{registerForm.controls.firstname.value}}
+{{registerForm.controls.lastname.value}}
+{{registerForm.controls.email.value}}
+{{registerForm.controls.password.value}}   
+{{registerForm.controls.confirmpassword.value}} -->
+
+</div>

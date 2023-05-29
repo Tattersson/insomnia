@@ -13,8 +13,10 @@ export class AuthService {
 
 
   public getUsers(): Observable<User[]> {
-    return this.http.get<User[]>(`${environment.baseApiUrl}/${this.url}`);
-  }
+    return this.http.get<User[]>(
+      `${environment.baseApiUrl}/${this.url}`
+      );
+    }
 
   constructor(private http: HttpClient) { 
 
@@ -30,6 +32,11 @@ export class AuthService {
   public deleteUser(user: User): Observable<User[]> {
     return this.http.delete<User[]>(
       `${environment.baseApiUrl}/${this.url}?Id=${user.userId}`
+      );
+  }
+  public getUser(user: User): Observable<User[]> {
+    return this.http.get<User[]>(
+      `${environment.baseApiUrl}/${this.url}/${user.userId}`
       );
   }
 

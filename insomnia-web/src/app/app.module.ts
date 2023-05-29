@@ -25,6 +25,7 @@ import { FooterComponent } from './footer/footer.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LogInComponent } from './login-register/log-in/log-in.component';
 import { RegisterComponent } from './login-register/register/register.component';
+import { ProfileComponent } from './profile/profile/profile.component';
 
 
 
@@ -43,6 +44,7 @@ import { RegisterComponent } from './login-register/register/register.component'
     FooterComponent,
     LogInComponent,
     RegisterComponent,
+    ProfileComponent,
 
   ],
   imports: [

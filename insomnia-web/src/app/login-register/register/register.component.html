@@ -1,5 +1,5 @@
-<mat-card class="w-25 bg-light-subtle m-auto mt-5 rounded-3 pb-3 shadow-lg">
-    <mat-card-title class=" p-3 m-0 bg-dark text-light shadow rounded-top-2">Rekisteröidy</mat-card-title>
+<mat-card class="w-25 bg-dark m-auto mt-5 rounded-3 pb-3 shadow-lg">
+    <mat-card-title class=" p-3 m-0 bg-dark text-light shadow-lg rounded-top-2">Rekisteröidy</mat-card-title>
     <mat-card-content>
         <form class="w-100 m-auto" (ngSubmit)="register(form1)" #form1="ngForm">
             <mat-form-field class="w-100 mt-3" color="accent" aria-label="Etunimi">
@@ -7,9 +7,11 @@
                     <mat-icon>perm_identity</mat-icon>
                     Etunimi
                 </mat-label>
-                <input matInput 
+                <input 
+                matInput
+                color = "accent"
                 placeholder="Etunimi" 
-                color="accent" 
+                class="inputs"
                 aria-label="Etunimi" 
                 matNativeControl="etunimi"
                 [(ngModel)] = "user.firstname"
@@ -71,20 +73,25 @@
                 [(ngModel)] = "user.password2"
                 name="password2"
                 >
+                <mat-error *ngIf="registerControl.hasError('required')"></mat-error>
             
             </mat-form-field>
            
 
 
         </form>
-        <div class="text-center mb-4">
-            <p>Tietosuojaselosteen pääset lukemaan alla olevasta napista</p>
-            <button mat-flat-button href="#" target="_blank" color="warn">Tietosuojaseloste</button>
+        <div class="text-center mb-4 text-light w-100">
+            <div>
+                <p>Tietosuojaselosteen pääset lukemaan alla olevasta napista</p>
+            </div>
+            <div class="m-auto px-5 py-2 w-100">
+                <button mat-raised-button href="#" target="_blank" class="rounded-5 w-100 text-bg-secondary">Tietosuojaseloste</button>
+            </div>
             
         </div>
     </mat-card-content>
-    <mat-card-footer class="m-auto p-2">
-        <button mat-raised-button color="primary" (click)="register(form1)">Rekisteröidy</button>
+    <mat-card-footer class="m-auto px-5 pb-2 w-100">
+        <button mat-raised-button class="rounded-5 w-100 text-bg-primary text-light fw-bolder" (click)="register(form1)">Rekisteröidy</button>
     </mat-card-footer>
 </mat-card>
 

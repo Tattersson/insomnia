@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "insomnia-web": {
+    "insomnia-angular": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/insomnia-web",
+            "outputPath": "dist/insomnia-angular",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -25,7 +25,7 @@
               "src/assets"
             ],
             "styles": [
-              "@angular/material/prebuilt-themes/pink-bluegrey.css",
+              "src/custom-theme.scss",
               "src/styles.css"
             ],
             "scripts": []
@@ -61,10 +61,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "insomnia-web:build:production"
+              "browserTarget": "insomnia-angular:build:production"
             },
             "development": {
-              "browserTarget": "insomnia-web:build:development"
+              "browserTarget": "insomnia-angular:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -72,7 +72,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "insomnia-web:build"
+            "browserTarget": "insomnia-angular:build"
           }
         },
         "test": {
@@ -88,7 +88,6 @@
               "src/assets"
             ],
             "styles": [
-              "@angular/material/prebuilt-themes/pink-bluegrey.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -98,6 +97,6 @@
     }
   },
   "cli": {
-    "analytics": "69f87ea3-f06b-4255-994a-c88c6519a8c0"
+    "analytics": "67e02937-ca7a-44ce-99b4-dbd416a5fb0b"
   }
 }

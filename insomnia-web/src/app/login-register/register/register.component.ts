@@ -1,7 +1,8 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { User } from 'src/app/models/User';
 import { AuthService } from 'src/app/auth.service';
-import { NgForm } from '@angular/forms';
+import { FormControl, NgForm, Validators } from '@angular/forms';
+
 
 @Component({
   selector: 'app-register',
@@ -14,6 +15,9 @@ export class RegisterComponent {
 
   userRole = "admin";
 
+  registerControl = new FormControl('', 
+  [Validators.required, Validators.email]
+  );
   
 
   constructor(private authService: AuthService) {
@@ -24,7 +28,20 @@ export class RegisterComponent {
 
     console.log(e.form.value);
 
-    this.authService.createUser(e.form.value).subscribe();
+    
+    
+    if (e.valid != true){
+      alert("Käyttäjä rekisteröity onnistuneesti!")
+      this.authService.createUser(e.form.value).subscribe();
+      e.resetForm();
+
+    }
+    else{
+      alert("Rekisteröityminen epäonnistui")
+      e.resetForm();
+    }
+    
+
 
   }
 
