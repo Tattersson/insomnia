@@ -57,7 +57,15 @@ export class RegisterComponent {
       this.registerForm.controls.confirmpassword.value
     );
     console.warn(user);
+    try {
     this.authService.register(user).subscribe();
+    this.registerForm.reset();
+    alert("User registration successful");
+    }
+    catch (err) {
+      console.warn(err);
+    }
+
   }
 
 }

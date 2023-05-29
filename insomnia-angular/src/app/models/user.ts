@@ -4,7 +4,6 @@ export class User {
     lastname = "";
     fullname = "";
     password = "";
-    confirmpassword = "";
     role = "";
     email = "";
 }

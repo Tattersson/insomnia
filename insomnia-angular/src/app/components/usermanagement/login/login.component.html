@@ -1,1 +1,17 @@
-<p>login works!</p>
+<div class="container">
+    <div class="title">
+        <h2>Login</h2>
+    </div>
+    <div class="formContainer">
+        <form action="" class="formGroup" [formGroup]="loginForm" (ngSubmit)="login(user)">
+            <input type="text" [(ngModel)]="user.email" formControlName="email" placeholder="Email">
+            <input type="password" [(ngModel)]="user.password" formControlName="password" placeholder="Password">
+        </form>
+    </div>
+    <div class="errorContainer">
+
+    </div>
+    <div class="buttonContainer">
+        <button type="submit" (click)="login(user)" mat-raised-button [disabled]="!loginForm.valid">Rekisteröidy</button>
+    </div>
+</div>
